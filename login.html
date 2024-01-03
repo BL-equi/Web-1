@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css" type="text/css"/> 
+    <title>Generic Shop</title>
+</head>
+<body>
+    <div id = "total">
+        <div id = "images">
+            <video id="video" autoplay loop muted>
+                <source src="Loginho.mp4" type="video/mp4">
+                Your browser don't support the video.
+              </video>
+        </div>
+        <div id = "lateral">
+            <div id="cadastro">
+            <div id = "login_box">
+                <form id="search" action="" method="get" accept-charset="utf-8">
+                    <h1 id="titulo">Log in</h1>
+                    <p>Login</p>
+                    <input id = "usuario" type="text" name="name" placeholder="Login = '123'" />
+                    <p>Password</p>
+                    <input id = "senha" type="password" name="password" placeholder="Password = '123'" />
+                    <br/>
+                    <input type="checkbox" name="longado" id="longado">
+                    <label for="longado" id="long">Keep logged in</label>
+                    <br>
+                    <input type="button" name="enviar" id="botton" value="Enviar" onclick="login()"/>
+                    <br>
+                </form>
+            </div>
+            <p id="conta">Doesn't have an account? <a href="#">Sign up</a></p>  
+        </div>
+        </div>
+    </div>
+    <script>
+        function login() {
+            var username = document.getElementById('usuario').value;
+            var password = document.getElementById('senha').value;
+            
+            if (username === '123' && password === '123') {
+                window.location.replace('página inicial/index.html')
+            }
+            else {
+                alert('login ou senha incorretos. tente novamente')
+            }
+        }
+    </script>
+</body>
+</html>
